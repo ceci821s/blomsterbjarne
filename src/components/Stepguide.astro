@@ -1,0 +1,62 @@
+---
+import "../style/global.css";
+const { variant, ikon, overskrift, tekst } = Astro.props;
+---
+
+<article data-variant={variant}>
+  <div class="ikon">
+    <img src="/img/blomst_ikon.svg" alt="" {ikon} />
+  </div>
+  <div class="info">
+    <div><h4>{overskrift}</h4></div>
+    <div>
+      <p>{tekst}</p>
+    </div>
+  </div>
+</article>
+
+<style>
+  article {
+    background-color: var(--regnorm-100);
+    border: 2px solid black;
+    width: 312px;
+    height: 438px;
+  }
+  .ikon {
+    display: grid;
+    justify-content: center;
+  }
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h4 {
+    font-family: var(--other-headings);
+    font-size: var(--h4-mobile);
+  }
+  p {
+    font-family: var(--font-body);
+    font-size: var(--body-mobile);
+  }
+
+  [data-variant="stepguide_desktop"] {
+    display: flex;
+    width: 728px;
+    height: 465px;
+  }
+  [data-variant="stepguide_desktop"] .ikon {
+    display: flex;
+    place-items: center;
+  }
+  [data-variant="stepguide_desktop"] img {
+    width: 180px;
+    height: 180px;
+  }
+  [data-variant="stepguide_desktop"] h4 {
+    font-size: var(--h4-desktop);
+  }
+  [data-variant="stepguide_desktop"] p {
+    font-size: var(--body-desktop);
+  }
+</style>

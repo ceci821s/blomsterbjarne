@@ -1,0 +1,23 @@
+---
+import "../style/global.css";
+const { variant, step1, step2, step3, step4 } = Astro.props;
+---
+
+<article>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</article>
+
+<style>
+  article {
+    display: flex;
+    gap: 10px;
+  }
+  div {
+    max-width: 145px;
+    max-height: 5px;
+    border: var(--rust-500) 1px solid;
+  }
+</style>
