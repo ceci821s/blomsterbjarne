@@ -1,0 +1,12 @@
+---
+import "../style/global.css";
+const { variant } = Astro.props;
+---
+
+<button data-variant={variant}>Text</button>
+
+<style>
+  button {
+    background-color: var(--color-primary-button-background);
+  }
+</style>
