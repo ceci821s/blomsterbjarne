@@ -8,5 +8,9 @@ const { variant } = Astro.props;
 <style>
   button {
     background-color: var(--color-primary-button-background);
+    color: var(--color-primary-button-text);
+  }
+  [data-variant="button_primary_hover"] {
+    background-color: var(--color-primary-button-hover-background);
   }
 </style>
