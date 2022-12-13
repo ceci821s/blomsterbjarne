@@ -1,6 +1,5 @@
 ---
 import "../style/global.css";
-import SecondaryButton from "../components/Secondary_button.astro";
 
 const {
   variant,
@@ -21,6 +20,7 @@ const {
 <article data-variant={variant}>
   <div>
     <div class="billede">
+      <img src="/img/fliparrow_ikon.svg" alt="" />
       <img src="/img/abonnement_filler.webp" alt="" />
     </div>
   </div>
@@ -46,9 +46,6 @@ const {
       </div>
     </div>
   </div>
-  <div class="knap">
-    <SecondaryButton knaptext="hej" />
-  </div>
 </article>
 
 <style>
@@ -68,10 +65,6 @@ const {
     font-size: var(--h5-mobile);
     font-family: var(--other-headings);
   }
-  .card_info,
-  .knap {
-    display: none;
-  }
 
   /* flipped card blomster */
   [data-variant="card_sortiment_flipped"] .billede {
@@ -80,11 +73,6 @@ const {
   [data-variant="card_sortiment_flipped"] .card_info {
     display: block;
     text-align: start;
-  }
-  [data-variant="card_sortiment_flipped"] .knap {
-    display: block;
-    display: grid;
-    justify-content: center;
   }
 
   [data-variant="card_sortiment_flipped"] .card_info img {
@@ -105,11 +93,6 @@ const {
     display: block;
     text-align: start;
   }
-  [data-variant="card_sortiment_flipped_vaser"] .knap {
-    display: block;
-    display: grid;
-    justify-content: center;
-  }
 
   [data-variant="card_sortiment_flipped_vaser"] .card_info img {
     width: 30px;
@@ -119,6 +102,11 @@ const {
     border: none;
   }
   [data-variant="card_sortiment_flipped_vaser"] .maal {
+    display: block;
+  }
+  [data-variant="card_sortiment_flipped_vaser"] .oprindelse,
+  [data-variant="card_sortiment_flipped_vaser"] .sollys,
+  [data-variant="card_sortiment_flipped_vaser"] .holdbarhed {
     display: none;
   }
 </style>
