@@ -14,6 +14,7 @@ const {
   holdbarhedikon = "holdbarhed",
   maalikon = "maal",
   prisikon = "pris",
+  underoverskrift,
 } = Astro.props;
 ---
 
@@ -27,7 +28,9 @@ const {
     </div>
 
     <div class="overskrift">
-      <h5>{overskrift}</h5><div class="card_info">
+      <h4>{overskrift}</h4><div class="card_info">
+        <h5>{underoverskrift}</h5>
+
         <div class="oprindelse">
           <img src={`/img/${oprindelseikon}_ikon.svg`} alt="" />
           <p>{oprindelse}</p>
@@ -80,6 +83,9 @@ const {
     display: grid;
     justify-content: end;
   }
+  h5 {
+    display: none;
+  }
 
   /* DESKTOP */
 
@@ -111,9 +117,19 @@ const {
   }
   [data-variant="card_sortiment_flipped"] .overskrift {
     border: none;
+    padding-top: var(--m-spacing-mobile);
+    padding-bottom: var(--l-spacing-mobile);
   }
   [data-variant="card_sortiment_flipped"] .maal {
     display: none;
+  }
+  [data-variant="card_sortiment_flipped"] .maal,
+  [data-variant="card_sortiment_flipped"] .oprindelse,
+  [data-variant="card_sortiment_flipped"] .sollys,
+  [data-variant="card_sortiment_flipped"] .holdbarhed,
+  [data-variant="card_sortiment_flipped"] .pris {
+    padding-right: var(--xs-spacing-mobile);
+    padding-bottom: var(--xs-spacing-mobile);
   }
 
   /* DESKTOP */
@@ -142,14 +158,23 @@ const {
   }
   [data-variant="card_sortiment_flipped_vaser"] .overskrift {
     border: none;
+    padding-top: var(--m-spacing-mobile);
+    padding-bottom: var(--l-spacing-mobile);
+  }
+  h5 {
+    display: block;
   }
   [data-variant="card_sortiment_flipped_vaser"] .maal {
     display: block;
+    padding-right: var(--xs-spacing-mobile);
+    padding-bottom: var(--xs-spacing-mobile);
   }
   [data-variant="card_sortiment_flipped_vaser"] .oprindelse,
   [data-variant="card_sortiment_flipped_vaser"] .sollys,
   [data-variant="card_sortiment_flipped_vaser"] .holdbarhed {
     display: none;
+    padding-right: var(--xs-spacing-mobile);
+    padding-bottom: var(--xs-spacing-mobile);
   }
 
   /* DESKTOP */

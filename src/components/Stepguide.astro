@@ -21,7 +21,9 @@ const {
     </div>
   </div>
   <div class="progress">
-    <ProgressBarCard>{progress_variant}</ProgressBarCard>
+    <div>
+      <ProgressBarCard />
+    </div>
   </div>
 </article>
 
@@ -51,12 +53,8 @@ const {
     font-size: var(--body-mobile);
   }
   .progress {
-    position: relative;
-    top: 42%;
-    left: 11%;
-    /* hvis position ikke dur senere: */
-    /* display: grid;
-    place-content: center; */
+    display: grid;
+    place-content: center;
   }
 
   /* DESKTOP */
