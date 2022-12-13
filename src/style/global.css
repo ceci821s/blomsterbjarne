@@ -89,6 +89,10 @@
   --icon-mobile-height: 40px;
   --icon-mobile-width: 40px;
 
+  /* SCREEN SIZES */
+  --size_mobile: 390px;
+  --size_desktop: 1730px;
+
   /* abonnement */
   --color-abonnement-bar-disabled: var(--rust-200);
   --color-abonnement-bar-active: var(--rust-500);
@@ -136,11 +140,11 @@
   --h5-mobile: 1.2rem;
   --body-mobile: 1rem;
   --button-mobile: 0.938rem;
+  --footer-mobile: 0.938rem;
   --banner-mobile: 6.875rem;
   --abonnement-text-spand: 0.563rem;
   --abonnement-text-info: 0.813rem;
   --progressbar-number: 0.625rem;
-  --size: 390px;
 
   /* desktop */
 
