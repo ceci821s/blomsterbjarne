@@ -31,26 +31,31 @@ const {
   article {
     background-color: var(--regnorm-100);
     border: 2px solid black;
-    width: 312px;
-    height: 438px;
+    width: 280px;
+
     border-radius: var(--xs-radius);
+    padding: var(--l-spacing-mobile);
   }
   .ikon {
     display: grid;
     justify-content: center;
+    padding-top: var(--l-spacing-mobile);
   }
   img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 
   h4 {
     font-family: var(--other-headings);
     font-size: var(--h4-mobile);
+    padding-top: var(--l-spacing-mobile);
+    padding-bottom: var(--l-spacing-mobile);
   }
   p {
     font-family: var(--font-body);
     font-size: var(--body-mobile);
+    padding-bottom: var(--l-spacing-mobile);
   }
   .progress {
     display: grid;
@@ -64,6 +69,7 @@ const {
       display: flex;
       width: 550px;
       height: 300px;
+      padding: var(--l-spacing-desktop);
     }
     .ikon {
       display: flex;
@@ -75,9 +81,12 @@ const {
     }
     h4 {
       font-size: var(--h4-desktop);
+      padding-top: var(--xl-spacing-desktop);
+      padding-bottom: var(--l-spacing-desktop);
     }
     p {
       font-size: var(--body-desktop);
+      padding-left: var(--l-spacing-desktop);
     }
     .progress {
       display: none;
