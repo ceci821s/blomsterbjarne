@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 :root {
   /* COLORS */
   /* rust */
@@ -132,6 +136,7 @@
   --abonnement-text-spand: 0.563rem;
   --abonnement-text-info: 0.813rem;
   --progressbar-number: 0.625rem;
+  --size: 390px;
 
   /* desktop */
 
