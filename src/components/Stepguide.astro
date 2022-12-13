@@ -1,11 +1,11 @@
 ---
 import "../style/global.css";
-const { variant, ikon, overskrift, tekst } = Astro.props;
+const { variant, overskrift, tekst, icon = "blomst" } = Astro.props;
 ---
 
 <article data-variant={variant}>
   <div class="ikon">
-    <img src="/img/blomst_ikon.svg" alt="" {ikon} />
+    <img src={`/img/${icon}_ikon.svg`} alt="" />
   </div>
   <div class="info">
     <div><h4>{overskrift}</h4></div>
