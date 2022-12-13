@@ -1,6 +1,13 @@
 ---
 import "../style/global.css";
-const { variant, overskrift, tekst, icon = "blomst" } = Astro.props;
+import ProgressBarCard from "../components/Progress_bar_card.astro";
+const {
+  variant,
+  overskrift,
+  tekst,
+  icon = "blomst",
+  progress_variant = "progress_bar_card_step_1",
+} = Astro.props;
 ---
 
 <article data-variant={variant}>
@@ -12,6 +19,9 @@ const { variant, overskrift, tekst, icon = "blomst" } = Astro.props;
     <div>
       <p>{tekst}</p>
     </div>
+  </div>
+  <div class="progress">
+    <ProgressBarCard {progress_variant} />
   </div>
 </article>
 
@@ -39,24 +49,35 @@ const { variant, overskrift, tekst, icon = "blomst" } = Astro.props;
     font-family: var(--font-body);
     font-size: var(--body-mobile);
   }
+  .progress {
+    position: relative;
+    top: 42%;
+    left: 11%;
+    /* hvis position ikke dur senere: */
+    /* display: grid;
+    place-content: center; */
+  }
 
   [data-variant="stepguide_desktop"] {
     display: flex;
-    width: 728px;
-    height: 465px;
+    width: 550px;
+    height: 300px;
   }
   [data-variant="stepguide_desktop"] .ikon {
     display: flex;
     place-items: center;
   }
   [data-variant="stepguide_desktop"] img {
-    width: 180px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
   }
   [data-variant="stepguide_desktop"] h4 {
     font-size: var(--h4-desktop);
   }
   [data-variant="stepguide_desktop"] p {
     font-size: var(--body-desktop);
+  }
+  [data-variant="stepguide_desktop"] .progress {
+    display: none;
   }
 </style>
