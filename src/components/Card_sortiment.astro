@@ -1,5 +1,6 @@
 ---
 import "../style/global.css";
+import SecondaryButton from "../components/Secondary_button.astro";
 
 const {
   variant,
@@ -9,7 +10,11 @@ const {
   holdbarhed,
   maal,
   pris,
-  icon = "blomst",
+  oprindelseikon = "oprindelse",
+  sollysikon = "sollys",
+  holdbarhedikon = "holdbarhed",
+  maalikon = "maal",
+  prisikon = "pris",
 } = Astro.props;
 ---
 
@@ -20,17 +25,29 @@ const {
     </div>
   </div>
   <div class="overskrift">
-    <h5>{overskrift}</h5>
-  </div>
-  <div class="card_info">
-    <div>
-      <img src={`/img/${icon}_ikon.svg`} alt="" />
-      <p>{oprindelse}</p>
+    <h5>{overskrift}</h5><div class="card_info">
+      <div class="oprindelse">
+        <img src={`/img/${oprindelseikon}_ikon.svg`} alt="" />
+        <p>{oprindelse}</p>
+      </div>
+      <div class="sollys">
+        <img src={`/img/${sollysikon}_ikon.svg`} alt="" /><p>{sollys}</p>
+      </div>
+      <div class="holdbarhed">
+        <img src={`/img/${holdbarhedikon}_ikon.svg`} alt="" /><p>
+          {holdbarhed}
+        </p>
+      </div>
+      <div class="maal">
+        <img src={`/img/${maalikon}_ikon.svg`} alt="" /><p>{maal}</p>
+      </div>
+      <div class="pris">
+        <img src={`/img/${prisikon}_ikon.svg`} alt="" /><p>{pris}</p>
+      </div>
     </div>
-    <div><img src={`/img/${icon}_ikon.svg`} alt="" /><p>{sollys}</p></div>
-    <div><img src={`/img/${icon}_ikon.svg`} alt="" /><p>{holdbarhed}</p></div>
-    <div><img src={`/img/${icon}_ikon.svg`} alt="" /><p>{maal}</p></div>
-    <div><img src={`/img/${icon}_ikon.svg`} alt="" /><p>{pris}</p></div>
+  </div>
+  <div class="knap">
+    <SecondaryButton knaptext="hej" />
   </div>
 </article>
 
@@ -51,13 +68,57 @@ const {
     font-size: var(--h5-mobile);
     font-family: var(--other-headings);
   }
-  .card_info {
+  .card_info,
+  .knap {
     display: none;
   }
+
+  /* flipped card blomster */
   [data-variant="card_sortiment_flipped"] .billede {
     display: none;
   }
   [data-variant="card_sortiment_flipped"] .card_info {
     display: block;
+    text-align: start;
+  }
+  [data-variant="card_sortiment_flipped"] .knap {
+    display: block;
+    display: grid;
+    justify-content: center;
+  }
+
+  [data-variant="card_sortiment_flipped"] .card_info img {
+    width: 30px;
+    height: 30px;
+  }
+  [data-variant="card_sortiment_flipped"] .overskrift {
+    border: none;
+  }
+  [data-variant="card_sortiment_flipped"] .maal {
+    display: none;
+  }
+  /* flipped card vaser */
+  [data-variant="card_sortiment_flipped_vaser"] .billede {
+    display: none;
+  }
+  [data-variant="card_sortiment_flipped_vaser"] .card_info {
+    display: block;
+    text-align: start;
+  }
+  [data-variant="card_sortiment_flipped_vaser"] .knap {
+    display: block;
+    display: grid;
+    justify-content: center;
+  }
+
+  [data-variant="card_sortiment_flipped_vaser"] .card_info img {
+    width: 30px;
+    height: 30px;
+  }
+  [data-variant="card_sortiment_flipped_vaser"] .overskrift {
+    border: none;
+  }
+  [data-variant="card_sortiment_flipped_vaser"] .maal {
+    display: none;
   }
 </style>
