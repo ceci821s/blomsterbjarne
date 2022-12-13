@@ -6,7 +6,8 @@ const { variant } = Astro.props;
 <article data-variant={variant}>
   <section class="butikker">
     <h4>BUTIKKER</h4>
-    <div>
+
+    <div class="strandvejen">
       <p>Strandvejen 167</p>
       <p>2900 Hellerup</p>
       <p>Danmark</p>
@@ -16,14 +17,14 @@ const { variant } = Astro.props;
       </p>
     </div>
 
-    <div>
+    <div class="gunnar">
       <p>Gunnar Nu Hansens Pl. 6</p>
       <p>2100 København Ø</p>
       <p>Danmark</p>
       <p><a href="tel:+4536260700"></a>Tlf.: +45 36 26 07 00</p>
     </div>
 
-    <div>
+    <div class="vaernedamsvej">
       <p>Værnedamsvej 4A st.</p>
       <p>1619 København V</p>
       <p>Danmark</p>
@@ -47,7 +48,7 @@ const { variant } = Astro.props;
   <section class="abningstider">
     <h4>ÅBNINGSTIDER</h4>
     <div class="tider">
-      <div>
+      <div class="dage">
         <p>Mandag</p>
         <p>Tirsdag</p>
         <p>Onsdag</p>
@@ -56,7 +57,7 @@ const { variant } = Astro.props;
         <p>Lørdag</p>
         <p>Søndag</p>
       </div>
-      <div>
+      <div class="tidspunkter">
         <p>10 - 18</p>
         <p>10 - 18</p>
         <p>10 - 18</p>
@@ -70,19 +71,28 @@ const { variant } = Astro.props;
 
   <section class="folgosher">
     <h4>FØLG OS HER</h4>
-    <div>
-      <svg width="40" height="40" viewBox="0 0 24 24"
-        ><path
-          fill="#fffdf9"
-          d="M12 9a3 3 0 1 0 0 6a3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0a1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058c-.784.037-1.31.142-1.798.332a2.886 2.886 0 0 0-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029c.037.783.142 1.31.331 1.797c.17.435.37.748.702 1.08c.337.336.65.537 1.08.703c.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058c.782-.037 1.309-.142 1.797-.331a2.92 2.92 0 0 0 1.08-.702c.337-.337.538-.65.704-1.08c.19-.493.296-1.02.332-1.8c.052-1.104.058-1.49.058-4.029c0-2.474-.007-2.878-.058-4.029c-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08a2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06c1.065.05 1.79.217 2.428.465c.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.047 1.066.06 1.405.06 4.122c0 2.717-.01 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772a4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465c-1.066.047-1.405.06-4.122.06c-2.717 0-3.056-.01-4.122-.06c-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153a4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122c.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z"
-        ></path>
+    <div class="ikoner">
+      <svg width="40" height="40" viewBox="0 0 48 48"
+        ><g fill="none" fill-rule="evenodd" clip-rule="evenodd"
+          ><path
+            stroke="#fffdf9"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4"
+            d="M4.111 46A2.117 2.117 0 0 1 2 43.877V4.123C2 2.95 2.945 2 4.111 2H43.89C45.055 2 46 2.95 46 4.123v39.754A2.117 2.117 0 0 1 43.889 46H4.11Z"
+          ></path><path
+            fill="#fffdf9"
+            d="M38.662 17.887h-4.869a2.445 2.445 0 0 0-2.444 2.444v4.89h7.313l-1.071 7.332h-6.242V46h-8.042V32.553h-6.64v-7.331h6.554l.086-6.959l-.024-2.494a6.377 6.377 0 0 1 6.376-6.438h9.003v8.556Z"
+          ></path>
+        </g>
       </svg>
-    </div>
-    <div>
-      <svg width="40" height="40" viewBox="0 0 1000 1000"
+      <svg width="44" height="44" viewBox="0 0 512 512"
         ><path
           fill="#fffdf9"
-          d="M182.594 0C81.445 0 0 81.445 0 182.594v634.813c0 101.149 81.445 182.594 182.594 182.594h344.063V609.063H423.282v-140.75h103.375v-120.25c0-94.475 61.079-181.219 201.781-181.219c56.968 0 99.094 5.469 99.094 5.469l-3.313 131.438s-42.963-.406-89.844-.406c-50.739 0-58.875 23.378-58.875 62.188v102.781h152.75l-6.656 140.75H675.5v390.938h141.906c101.149 0 182.594-81.445 182.594-182.594V182.595C1000 81.446 918.555.001 817.406.001H182.593z"
+          d="M349.33 69.33a93.62 93.62 0 0 1 93.34 93.34v186.66a93.62 93.62 0 0 1-93.34 93.34H162.67a93.62 93.62 0 0 1-93.34-93.34V162.67a93.62 93.62 0 0 1 93.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32Z"
+        ></path><path
+          fill="#fffdf9"
+          d="M377.33 162.67a28 28 0 1 1 28-28a27.94 27.94 0 0 1-28 28ZM256 181.33A74.67 74.67 0 1 1 181.33 256A74.75 74.75 0 0 1 256 181.33m0-37.33a112 112 0 1 0 112 112a112 112 0 0 0-112-112Z"
         ></path>
       </svg>
     </div>
@@ -97,15 +107,49 @@ const { variant } = Astro.props;
 </article>
 
 <style>
+    /* MOBILE */
   article {
     background-color: var(--footer-background1);
-    width: var(--size);
+    width: var(--size_mobile);
     padding-top: var(--xl-spacing-mobile);
+    text-align: center;
+    color: var(--background-color);
+    font-family: var(--font-body);
+    font-size: var(--body-mobile);
+  }
+
+  article p,
+  article a {
+    color: var(--background-color);
+    font-family: var(--font-body);
+    font-size: var(--body-mobile);
+  }
+
+  .ikoner {
+    display: flex;
+    gap: var(--m-spacing-mobile);
+    place-content: center;
+  }
+
+  .folgosher h4 {
+    padding-bottom: var(--l-spacing-mobile);
+  }
+
+  h4 {
+    font-size: var(--h4-mobile);
+    color: var(--background-color);
+    font-family: var(--font-body);
   }
 
   .butikker,
   .informationer,
   .abningstider {
+    display: grid;
+    gap: var(--l-spacing-mobile);
+  }
+
+  .dage,
+  .tidspunkter {
     display: grid;
     gap: var(--l-spacing-mobile);
   }
@@ -122,15 +166,16 @@ const { variant } = Astro.props;
     padding-bottom: var(--xxl-spacing-mobile);
   }
 
-  article p,
-  article a,
-  article h4 {
-    color: var(--background-color);
-    font-family: var(--font-body);
-    font-size: var(--body-mobile);
-  }
-
   .nederst {
     background-color: var(--footer-background2);
+    display: grid;
+    gap: var(--l-spacing-mobile);
+    padding-bottom: var(--xl-spacing-mobile);
+    padding-top: var(--l-spacing-mobile);
   }
+
+  /* DESKTOP */
+
+  [data-variant="footer"]
+
 </style>
