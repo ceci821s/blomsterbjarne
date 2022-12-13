@@ -1,17 +1,36 @@
 ---
 import "../style/global.css";
 
-const { variant, overskrift } = Astro.props;
+const {
+  variant,
+  overskrift,
+  oprindelse,
+  sollys,
+  holdbarhed,
+  maal,
+  pris,
+  icon = "blomst",
+} = Astro.props;
 ---
 
 <article data-variant={variant}>
   <div>
-    <div>
+    <div class="billede">
       <img src="/img/abonnement_filler.webp" alt="" />
     </div>
   </div>
   <div class="overskrift">
     <h5>{overskrift}</h5>
+  </div>
+  <div class="card_info">
+    <div>
+      <img src={`/img/${icon}_ikon.svg`} alt="" />
+      <p>{oprindelse}</p>
+    </div>
+    <div><img src={`/img/${icon}_ikon.svg`} alt="" /><p>{sollys}</p></div>
+    <div><img src={`/img/${icon}_ikon.svg`} alt="" /><p>{holdbarhed}</p></div>
+    <div><img src={`/img/${icon}_ikon.svg`} alt="" /><p>{maal}</p></div>
+    <div><img src={`/img/${icon}_ikon.svg`} alt="" /><p>{pris}</p></div>
   </div>
 </article>
 
@@ -29,6 +48,16 @@ const { variant, overskrift } = Astro.props;
     color: black;
     border-top: 2px solid black;
     text-align: center;
-    font-size: ;
+    font-size: var(--h5-mobile);
+    font-family: var(--other-headings);
+  }
+  .card_info {
+    display: none;
+  }
+  [data-variant="card_sortiment_flipped"] .billede {
+    display: none;
+  }
+  [data-variant="card_sortiment_flipped"] .card_info {
+    display: block;
   }
 </style>
