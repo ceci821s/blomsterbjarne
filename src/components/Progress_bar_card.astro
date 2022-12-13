@@ -1,13 +1,13 @@
 ---
 import "../style/global.css";
-const { variant, step1, step2, step3, step4 } = Astro.props;
+const { variant } = Astro.props;
 ---
 
-<article>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
+<article data-variant="{variant}">
+  <div class="step1"></div>
+  <div class="step2"></div>
+  <div class="step3"></div>
+  <div class="step4"></div>
 </article>
 
 <style>
@@ -16,8 +16,31 @@ const { variant, step1, step2, step3, step4 } = Astro.props;
     gap: 10px;
   }
   div {
-    max-width: 145px;
-    max-height: 5px;
+    width: 50px;
+    height: 5px;
     border: var(--rust-500) 1px solid;
+  }
+
+  /* step 1 */
+
+  [data-variant="progress_bar_card_step1"] .step1 {
+    background-color: var(--rust-500);
+  }
+
+  /* step 2 */
+  [data-variant="progress_bar_card_step2"] .step2 {
+    background-color: var(--rust-500);
+  }
+
+  /* step 3 */
+
+  [data-variant="progress_bar_card_step3"] .step3 {
+    background-color: var(--rust-500);
+  }
+
+  /* step 4 */
+
+  [data-variant="progress_bar_card_step4"] .step4 {
+    background-color: var(--rust-500);
   }
 </style>
