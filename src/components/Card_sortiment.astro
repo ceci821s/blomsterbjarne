@@ -1,0 +1,34 @@
+---
+import "../style/global.css";
+
+const { variant, overskrift } = Astro.props;
+---
+
+<article data-variant={variant}>
+  <div>
+    <div>
+      <img src="/img/abonnement_filler.webp" alt="" />
+    </div>
+  </div>
+  <div class="overskrift">
+    <h5>{overskrift}</h5>
+  </div>
+</article>
+
+<style>
+  article {
+    border: solid 2px black;
+    border-radius: var(--xs-radius);
+    max-width: 280px;
+  }
+  img {
+    width: 280px;
+  }
+  .overskrift {
+    background-color: #ffffff;
+    color: black;
+    border-top: 2px solid black;
+    text-align: center;
+    font-size: ;
+  }
+</style>
