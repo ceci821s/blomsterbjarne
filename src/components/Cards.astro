@@ -20,7 +20,9 @@ const {
 <article data-variant={variant}>
   <div class="article_wrapper">
     <div class="billede">
-      <img class="arrow" src="/img/fliparrow_ikon.svg" alt="" />
+      <div class="arrow">
+        <img src="/img/fliparrow_ikon.svg" alt="" />
+      </div>
       <img src="/img/abonnement_filler.webp" alt="" />
     </div>
 
@@ -70,11 +72,13 @@ const {
     display: none;
   }
 
-  .arrow {
+  .arrow img {
     width: 20px;
     height: 20px;
-    position: absolute;
-    left: 10.5%;
+  }
+  .arrow {
+    display: grid;
+    justify-content: end;
   }
 
   /* flipped card blomster */
@@ -136,10 +140,9 @@ const {
   [data-variant="card_forside"] img {
     width: 280px;
   }
-  [data-variant="card_forside"] .arrow {
+  [data-variant="card_forside"] .arrow img {
     width: 25px;
     height: 25px;
-    left: 19.8%;
   }
   /* Card forside flipped */
   [data-variant="card_forside_flipped"] .article_wrapper {
