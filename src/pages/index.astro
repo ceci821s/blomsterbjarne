@@ -5,9 +5,9 @@ import PrimaryButton from "../components/Primary_button.astro";
 import SecondaryButton from "../components/Secondary_button.astro";
 import CardAbonnement from "../components/Card_abonnement.astro";
 import ProgressBarAbonnementMobil from "../components/Progress_bar_abonnement_mobil.astro";
-import ProgressBarAbonnementDesktop from "../components/Progress_bar_abonnement_desktop.astro";
+
 import ProgressBarKurvMobil from "../components/Progress_bar_kurv_mobil.astro";
-import ProgressBarKurvDesktop from "../components/Progress_bar_kurv_desktop.astro";
+
 import Stepguide from "../components/Stepguide.astro";
 import ProgressBarCard from "../components/Progress_bar_card.astro";
 import Footer from "../components/Footer.astro";
@@ -32,15 +32,10 @@ import Navigation from "../components/Navigation.astro";
   <Navigation />
 
   <PrimaryButton knaptext="" />
-  <PrimaryButton variant="button_primary_desktop" knaptext="" />
+
   <SecondaryButton knaptext="" />
   <CardAbonnement spand="hej" size="hej" pris="hej" />
-  <CardAbonnement
-    variant="card_abonnement_desktop"
-    spand="hej"
-    size="hej"
-    pris="hej"
-  />
+
   <ProgressBarAbonnementMobil
     step1="Størrelse"
     step2="Stil"
@@ -95,60 +90,7 @@ import Navigation from "../components/Navigation.astro";
     step3="Betal"
     step4="Bekræft"
   />
-  <ProgressBarAbonnementDesktop
-    step1="Størrelse"
-    step2="Stil"
-    step3="Duft"
-    step4="Hyppighed"
-  />
-  <ProgressBarAbonnementDesktop
-    variant="progress_bar_step2"
-    step1="Størrelse"
-    step2="Stil"
-    step3="Duft"
-    step4="Hyppighed"
-  />
-  <ProgressBarAbonnementDesktop
-    variant="progress_bar_step3"
-    step1="Størrelse"
-    step2="Stil"
-    step3="Duft"
-    step4="Hyppighed"
-  />
-  <ProgressBarAbonnementDesktop
-    variant="progress_bar_step4"
-    step1="Størrelse"
-    step2="Stil"
-    step3="Duft"
-    step4="Hyppighed"
-  />
-  <ProgressBarKurvDesktop
-    step1="Kurv"
-    step2="Info"
-    step3="Betal"
-    step4="Bekræft"
-  />
-  <ProgressBarKurvDesktop
-    variant="progress_bar_step2"
-    step1="Kurv"
-    step2="Info"
-    step3="Betal"
-    step4="Bekræft"
-  />
-  <ProgressBarKurvDesktop
-    variant="progress_bar_step3"
-    step1="Kurv"
-    step2="Info"
-    step3="Betal"
-    step4="Bekræft"
-  />
-  <ProgressBarKurvDesktop
-    variant="progress_bar_step4"
-    step1="Kurv"
-    step2="Info"
-    step3="Betal"
-    step4="Bekræft"
-  />
+
   <Stepguide
     overskrift="1.stepguide"
     tekst="lorem ipsum"
@@ -167,6 +109,7 @@ import Navigation from "../components/Navigation.astro";
   <ProgressBarCard variant="progress_bar_card_step_4" />
 
   <Footer />
+  <Footer variant="footer_desktop" />
 
   <Cards overskrift="hej" />
   <Cards variant="card_sortiment_flipped" overskrift="hej" />
