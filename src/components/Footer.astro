@@ -114,7 +114,6 @@ const { variant } = Astro.props;
   /* MOBILE */
   article {
     background-color: var(--footer-background1);
-    width: var(--size_mobile);
     padding-top: var(--xl-spacing-mobile);
     text-align: center;
     color: var(--background-color);
@@ -179,17 +178,4 @@ const { variant } = Astro.props;
   }
 
   /* DESKTOP */
-
-  [data-variant="footer_desktop"] article {
-    width: var(--size_desktop);
-  }
-
-  [data-variant="footer_desktop"] .desktop {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  [data-variant="footer_desktop"] .folgosher {
-    grid-column: 2;
-  }
 </style>
