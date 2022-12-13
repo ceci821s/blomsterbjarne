@@ -85,6 +85,10 @@
 
   /* PROGRESSBARS */
 
+  /* ICON SIZES */
+  --icon-mobile-height: 40px;
+  --icon-mobile-width: 40px;
+
   /* abonnement */
   --color-abonnement-bar-disabled: var(--rust-200);
   --color-abonnement-bar-active: var(--rust-500);
