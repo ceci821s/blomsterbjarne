@@ -20,7 +20,7 @@ const {
 <article data-variant={variant}>
   <div>
     <div class="billede">
-      <img src="/img/fliparrow_ikon.svg" alt="" />
+      <img class="arrow" src="/img/fliparrow_ikon.svg" alt="" />
       <img src="/img/abonnement_filler.webp" alt="" />
     </div>
   </div>
@@ -65,6 +65,17 @@ const {
     font-size: var(--h5-mobile);
     font-family: var(--other-headings);
   }
+  .card_info img {
+    display: none;
+  }
+  .billede {
+    display: grid;
+  }
+  .billede .arrow {
+    width: 30px;
+    height: 30px;
+    place-content: end;
+  }
 
   /* flipped card blomster */
   [data-variant="card_sortiment_flipped"] .billede {
@@ -76,6 +87,7 @@ const {
   }
 
   [data-variant="card_sortiment_flipped"] .card_info img {
+    display: block;
     width: 30px;
     height: 30px;
   }
@@ -95,6 +107,7 @@ const {
   }
 
   [data-variant="card_sortiment_flipped_vaser"] .card_info img {
+    display: block;
     width: 30px;
     height: 30px;
   }
