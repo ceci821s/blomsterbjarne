@@ -85,13 +85,17 @@
 
   /* PROGRESSBARS */
 
+  /* MARGIN */
+  --margin_mobile: 30px;
+  --margin_desktop: 80px;
+
   /* ICON SIZES */
   --icon-mobile-height: 40px;
   --icon-mobile-width: 40px;
 
   /* SCREEN SIZES */
   --size_mobile: 390px;
-  --size_desktop: 1730px;
+  --size_desktop: 1440px;
 
   /* abonnement */
   --color-abonnement-bar-disabled: var(--rust-200);
