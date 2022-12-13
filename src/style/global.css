@@ -76,6 +76,9 @@
   --color-blomster-headings: var(--himmel-500);
   --color-banner-heading: var(--sol-300);
 
+  /* TYPOGRAFI */
+  --color-white: #ffffff;
+
   /* PROGRESSBARS */
 
   /* abonnement */
