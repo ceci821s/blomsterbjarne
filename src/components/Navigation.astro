@@ -5,14 +5,47 @@ const { variant } = Astro.props;
 ---
 
 <article>
-  <section>
-    <img src="" alt="" />
-    <button class="toggle-btn lg:hidden">☰</button>
+  <section class="navigation_mobil">
+    <div>
+      <button>
+        <img class="logo_mobil" src="/img/logo/bb_logo_kort.png" alt="" />
+      </button>
+    </div>
+    <div class="burger">
+      <button class="toggle-btn">
+        <img class="burger_ikon" src="/img/burger_menu.svg" alt="" />
+      </button>
+    </div>
   </section>
 </article>
 
-<style></style>
-<script>
+<style>
+  img {
+    width: 75px;
+  }
+
+  button {
+    background-color: var(--background-color);
+    border: none;
+  }
+
+  .burger_ikon {
+    width: 40px;
+    height: 40px;
+  }
+  .navigation_mobil {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    height: 96px;
+
+    align-items: center;
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+</style>
+<!-- <script>
   const btn = document.querySelector(".toggle-btn");
   const nav = document.querySelector("nav");
 
@@ -27,4 +60,4 @@ const { variant } = Astro.props;
   }
 
   btn.addEventListener("click", toggleMenu);
-</script>
+</script> -->
