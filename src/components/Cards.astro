@@ -81,6 +81,17 @@ const {
     justify-content: end;
   }
 
+  /* DESKTOP */
+
+  @media (min-width: 900px) {
+    .article_wrapper,
+    img {
+      width: 452px;
+    }
+    .overskrift {
+      font-size: var(--h5-desktop);
+    }
+  }
   /* flipped card blomster */
   [data-variant="card_sortiment_flipped"] .article_wrapper {
     width: 280px;
@@ -103,6 +114,14 @@ const {
   }
   [data-variant="card_sortiment_flipped"] .maal {
     display: none;
+  }
+
+  /* DESKTOP */
+
+  @media (min-width: 900px) {
+    [data-variant="card_sortiment_flipped"] .article_wrapper {
+      width: 452px;
+    }
   }
   /* flipped card vaser */
   [data-variant="card_sortiment_flipped_vaser"] .article_wrapper {
@@ -133,6 +152,14 @@ const {
     display: none;
   }
 
+  /* DESKTOP */
+
+  @media (min-width: 900px) {
+    [data-variant="card_sortiment_flipped_vaser"] .article_wrapper {
+      width: 452px;
+    }
+  }
+
   /* Card forside */
   [data-variant="card_forside"] .article_wrapper {
     width: 280px;
@@ -143,6 +170,15 @@ const {
   [data-variant="card_forside"] .arrow img {
     width: 25px;
     height: 25px;
+  }
+
+  /* DESKTOP */
+
+  @media (min-width: 900px) {
+    [data-variant="card_forside"] .article_wrapper,
+    [data-variant="card_forside"] img {
+      width: 452px;
+    }
   }
   /* Card forside flipped */
   [data-variant="card_forside_flipped"] .article_wrapper {
@@ -167,6 +203,11 @@ const {
   [data-variant="card_forside_flipped"] .maal {
     display: none;
   }
-
   /* DESKTOP */
+
+  @media (min-width: 900px) {
+    [data-variant="card_forside_flipped"] .article_wrapper {
+      width: 452px;
+    }
+  }
 </style>

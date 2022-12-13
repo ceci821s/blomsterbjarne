@@ -128,4 +128,41 @@ const { variant, step1, step2, step3, step4 } = Astro.props;
   [data-variant="progress_bar_step4"] .line3 {
     border: solid 2px var(--color-kurv-bar-active);
   }
+  @media (min-width: 900px) {
+    .ball1,
+    .ball2,
+    .ball3,
+    .ball4 {
+      width: 50px;
+      height: 50px;
+      background-color: var(--color-kurv-bar-disabled);
+      border-radius: 100%;
+      font-family: var(--font-body);
+      font-size: var(--h4-desktop);
+
+      color: var(--color-kurv-bar-text);
+    }
+    .ball1 {
+      background-color: var(--color-kurv-bar-active);
+      z-index: 1;
+    }
+
+    .line1,
+    .line2,
+    .line3 {
+      width: 180px;
+      height: 0px;
+      border: 5px solid var(--color-kurv-bar-disabled);
+    }
+    [data-variant="progress_bar_step2"] .line1,
+    [data-variant="progress_bar_step3"] .line1,
+    [data-variant="progress_bar_step3"] .line2,
+    [data-variant="progress_bar_step4"] .line1,
+    [data-variant="progress_bar_step4"] .line2,
+    [data-variant="progress_bar_step4"] .line3 {
+      width: 180px;
+      height: 0px;
+      border: 5px solid var(--color-kurv-bar-active);
+    }
+  }
 </style>

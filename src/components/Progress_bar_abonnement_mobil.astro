@@ -129,7 +129,9 @@ const { variant, step1, step2, step3, step4 } = Astro.props;
     border: solid 2px var(--color-abonnement-bar-active);
   }
 
-  @media (min-width: 1700px) {
+  /* desktop */
+
+  @media (min-width: 900px) {
     .ball1,
     .ball2,
     .ball3,
@@ -153,8 +155,17 @@ const { variant, step1, step2, step3, step4 } = Astro.props;
     .line3 {
       width: 180px;
       height: 0px;
-      border: solid 5px var(--color-abonnement-bar-disabled);
-      margin-left: -3px;
+      border: 5px solid var(--color-abonnement-bar-disabled);
+    }
+    [data-variant="progress_bar_step2"] .line1,
+    [data-variant="progress_bar_step3"] .line1,
+    [data-variant="progress_bar_step3"] .line2,
+    [data-variant="progress_bar_step4"] .line1,
+    [data-variant="progress_bar_step4"] .line2,
+    [data-variant="progress_bar_step4"] .line3 {
+      width: 180px;
+      height: 0px;
+      border: 5px solid var(--color-abonnement-bar-active);
     }
   }
 </style>

@@ -25,7 +25,6 @@ const { spand, size, pris, variant } = Astro.props;
   }
   img {
     max-width: 142px;
-    max-height: 184.49px;
   }
   .info_wrapper {
     background-color: var(--rust-100);
@@ -41,5 +40,19 @@ const { spand, size, pris, variant } = Astro.props;
   .info {
     display: flex;
     justify-content: space-between;
+  }
+  @media (min-width: 900px) {
+    article {
+      max-width: 375.39px;
+    }
+    img {
+      max-width: 375.39px;
+    }
+    .info_wrapper {
+      font-size: var(--h4-desktop);
+    }
+    .spand {
+      font-size: var(--body-desktop);
+    }
   }
 </style>
