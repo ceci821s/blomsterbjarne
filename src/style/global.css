@@ -190,15 +190,15 @@
 
   /* desktop */
 
-  --xxxs-spacing-mobile: 6px;
-  --xxs-spacing-mobile: 11px;
-  --xs-spacing-mobile: 17px;
-  --s-spacing-mobile: 22px;
-  --m-spacing-mobile: 33px;
-  --l-spacing-mobile: 44px;
-  --xl-spacing-mobile: 66px;
-  --xxl-spacing-mobile: 88px;
-  --xxxl-spacing-mobile: 132px;
+  --xxxs-spacing-desktop: 6px;
+  --xxs-spacing-desktop: 11px;
+  --xs-spacing-desktop: 17px;
+  --s-spacing-desktop: 22px;
+  --m-spacing-desktop: 33px;
+  --l-spacing-desktop: 44px;
+  --xl-spacing-desktop: 66px;
+  --xxl-spacing-desktop: 88px;
+  --xxxl-spacing-desktop: 132px;
 
   /* spacing grid */
 
