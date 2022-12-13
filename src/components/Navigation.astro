@@ -1,0 +1,30 @@
+---
+import "../style/global.css";
+
+const { variant } = Astro.props;
+---
+
+<article>
+  <section>
+    <img src="" alt="" />
+    <button class="toggle-btn lg:hidden">☰</button>
+  </section>
+</article>
+
+<style></style>
+<script>
+  const btn = document.querySelector(".toggle-btn");
+  const nav = document.querySelector("nav");
+
+  function toggleMenu() {
+    nav.classList.toggle("shown");
+    const menuShown = nav.classList.contains("shown");
+    if (menuShown) {
+      btn.textContent = "✕";
+    } else {
+      btn.textContent = "☰";
+    }
+  }
+
+  btn.addEventListener("click", toggleMenu);
+</script>

@@ -12,6 +12,7 @@ import Stepguide from "../components/Stepguide.astro";
 import ProgressBarCard from "../components/Progress_bar_card.astro";
 import Footer from "../components/Footer.astro";
 import CardSortiment from "../components/Card_sortiment.astro";
+import Navigation from "../components/Navigation.astro";
 ---
 
 <html lang="en">
@@ -27,148 +28,153 @@ import CardSortiment from "../components/Card_sortiment.astro";
     />
     <meta name="generator" content={Astro.generator} />
   </head>
-  <body>
-    <PrimaryButton knaptext="" />
-    <PrimaryButton variant="button_primary_desktop" knaptext="" />
-    <SecondaryButton knaptext="" />
-    <CardAbonnement spand="hej" size="hej" pris="hej" />
-    <CardAbonnement
-      variant="card_abonnement_desktop"
-      spand="hej"
-      size="hej"
-      pris="hej"
-    />
-    <ProgressBarAbonnementMobil
-      step1="Størrelse"
-      step2="Stil"
-      step3="Duft"
-      step4="Hyppighed"
-    />
-    <ProgressBarAbonnementMobil
-      variant="progress_bar_step2"
-      step1="Størrelse"
-      step2="Stil"
-      step3="Duft"
-      step4="Hyppighed"
-    />
-    <ProgressBarAbonnementMobil
-      variant="progress_bar_step3"
-      step1="Størrelse"
-      step2="Stil"
-      step3="Duft"
-      step4="Hyppighed"
-    />
-    <ProgressBarAbonnementMobil
-      variant="progress_bar_step4"
-      step1="Størrelse"
-      step2="Stil"
-      step3="Duft"
-      step4="Hyppighed"
-    />
-    <ProgressBarKurvMobil
-      step1="Kurv"
-      step2="Info"
-      step3="Betal"
-      step4="Bekræft"
-    />
-    <ProgressBarKurvMobil
-      variant="progress_bar_step2"
-      step1="Kurv"
-      step2="Info"
-      step3="Betal"
-      step4="Bekræft"
-    />
-    <ProgressBarKurvMobil
-      variant="progress_bar_step3"
-      step1="Kurv"
-      step2="Info"
-      step3="Betal"
-      step4="Bekræft"
-    />
-    <ProgressBarKurvMobil
-      variant="progress_bar_step4"
-      step1="Kurv"
-      step2="Info"
-      step3="Betal"
-      step4="Bekræft"
-    />
-    <ProgressBarAbonnementDesktop
-      step1="Størrelse"
-      step2="Stil"
-      step3="Duft"
-      step4="Hyppighed"
-    />
-    <ProgressBarAbonnementDesktop
-      variant="progress_bar_step2"
-      step1="Størrelse"
-      step2="Stil"
-      step3="Duft"
-      step4="Hyppighed"
-    />
-    <ProgressBarAbonnementDesktop
-      variant="progress_bar_step3"
-      step1="Størrelse"
-      step2="Stil"
-      step3="Duft"
-      step4="Hyppighed"
-    />
-    <ProgressBarAbonnementDesktop
-      variant="progress_bar_step4"
-      step1="Størrelse"
-      step2="Stil"
-      step3="Duft"
-      step4="Hyppighed"
-    />
-    <ProgressBarKurvDesktop
-      step1="Kurv"
-      step2="Info"
-      step3="Betal"
-      step4="Bekræft"
-    />
-    <ProgressBarKurvDesktop
-      variant="progress_bar_step2"
-      step1="Kurv"
-      step2="Info"
-      step3="Betal"
-      step4="Bekræft"
-    />
-    <ProgressBarKurvDesktop
-      variant="progress_bar_step3"
-      step1="Kurv"
-      step2="Info"
-      step3="Betal"
-      step4="Bekræft"
-    />
-    <ProgressBarKurvDesktop
-      variant="progress_bar_step4"
-      step1="Kurv"
-      step2="Info"
-      step3="Betal"
-      step4="Bekræft"
-    />
-    <Stepguide
-      overskrift="1.stepguide"
-      tekst="lorem ipsum"
-      progress_variant="progress_bar_card_step_1"
-    />
-    <Stepguide
-      variant="stepguide_desktop"
-      overskrift="1.stepguide"
-      tekst="lorem ipsum"
-      icon="blomst"
-    />
-    <ProgressBarCard />
-    <ProgressBarCard variant="progress_bar_card_step_1" />
-    <ProgressBarCard variant="progress_bar_card_step_2" />
-    <ProgressBarCard variant="progress_bar_card_step_3" />
-    <ProgressBarCard variant="progress_bar_card_step_4" />
 
-    <Footer />
+  <Navigation />
 
-    <CardSortiment overskrift="hej" />
-    <CardSortiment variant="card_sortiment_flipped" overskrift="hej" />
-    <CardSortiment variant="card_sortiment_flipped_vaser" overskrift="hej" />
+  <PrimaryButton knaptext="" />
+  <PrimaryButton variant="button_primary_desktop" knaptext="" />
+  <SecondaryButton knaptext="" />
+  <CardAbonnement spand="hej" size="hej" pris="hej" />
+  <CardAbonnement
+    variant="card_abonnement_desktop"
+    spand="hej"
+    size="hej"
+    pris="hej"
+  />
+  <ProgressBarAbonnementMobil
+    step1="Størrelse"
+    step2="Stil"
+    step3="Duft"
+    step4="Hyppighed"
+  />
+  <ProgressBarAbonnementMobil
+    variant="progress_bar_step2"
+    step1="Størrelse"
+    step2="Stil"
+    step3="Duft"
+    step4="Hyppighed"
+  />
+  <ProgressBarAbonnementMobil
+    variant="progress_bar_step3"
+    step1="Størrelse"
+    step2="Stil"
+    step3="Duft"
+    step4="Hyppighed"
+  />
+  <ProgressBarAbonnementMobil
+    variant="progress_bar_step4"
+    step1="Størrelse"
+    step2="Stil"
+    step3="Duft"
+    step4="Hyppighed"
+  />
+  <ProgressBarKurvMobil
+    step1="Kurv"
+    step2="Info"
+    step3="Betal"
+    step4="Bekræft"
+  />
+  <ProgressBarKurvMobil
+    variant="progress_bar_step2"
+    step1="Kurv"
+    step2="Info"
+    step3="Betal"
+    step4="Bekræft"
+  />
+  <ProgressBarKurvMobil
+    variant="progress_bar_step3"
+    step1="Kurv"
+    step2="Info"
+    step3="Betal"
+    step4="Bekræft"
+  />
+  <ProgressBarKurvMobil
+    variant="progress_bar_step4"
+    step1="Kurv"
+    step2="Info"
+    step3="Betal"
+    step4="Bekræft"
+  />
+  <ProgressBarAbonnementDesktop
+    step1="Størrelse"
+    step2="Stil"
+    step3="Duft"
+    step4="Hyppighed"
+  />
+  <ProgressBarAbonnementDesktop
+    variant="progress_bar_step2"
+    step1="Størrelse"
+    step2="Stil"
+    step3="Duft"
+    step4="Hyppighed"
+  />
+  <ProgressBarAbonnementDesktop
+    variant="progress_bar_step3"
+    step1="Størrelse"
+    step2="Stil"
+    step3="Duft"
+    step4="Hyppighed"
+  />
+  <ProgressBarAbonnementDesktop
+    variant="progress_bar_step4"
+    step1="Størrelse"
+    step2="Stil"
+    step3="Duft"
+    step4="Hyppighed"
+  />
+  <ProgressBarKurvDesktop
+    step1="Kurv"
+    step2="Info"
+    step3="Betal"
+    step4="Bekræft"
+  />
+  <ProgressBarKurvDesktop
+    variant="progress_bar_step2"
+    step1="Kurv"
+    step2="Info"
+    step3="Betal"
+    step4="Bekræft"
+  />
+  <ProgressBarKurvDesktop
+    variant="progress_bar_step3"
+    step1="Kurv"
+    step2="Info"
+    step3="Betal"
+    step4="Bekræft"
+  />
+  <ProgressBarKurvDesktop
+    variant="progress_bar_step4"
+    step1="Kurv"
+    step2="Info"
+    step3="Betal"
+    step4="Bekræft"
+  />
+  <Stepguide
+    overskrift="1.stepguide"
+    tekst="lorem ipsum"
+    progress_variant="progress_bar_card_step_1"
+  />
+  <Stepguide
+    variant="stepguide_desktop"
+    overskrift="1.stepguide"
+    tekst="lorem ipsum"
+    icon="blomst"
+  />
+  <ProgressBarCard />
+  <ProgressBarCard variant="progress_bar_card_step_1" />
+  <ProgressBarCard variant="progress_bar_card_step_2" />
+  <ProgressBarCard variant="progress_bar_card_step_3" />
+  <ProgressBarCard variant="progress_bar_card_step_4" />
 
-    <style></style>
-  </body>
+  <Footer />
+
+  <CardSortiment overskrift="hej" />
+  <CardSortiment variant="card_sortiment_flipped" overskrift="hej" />
+  <CardSortiment variant="card_sortiment_flipped_vaser" overskrift="hej" />
+  <CardSortiment variant="card_forside" overskrift="hej" />
+  <CardSortiment variant="card_forside_flipped" overskrift="hej" />
+
+  <style></style>
+
+
 </html>
