@@ -8,27 +8,55 @@ const { variant } = Astro.props;
   <section class="navigation_mobil">
     <div>
       <button>
-        <img class="logo_mobil" src="/img/logo/bb_logo_kort.png" alt="" />
+        <a href=""
+          ><img class="logo_kort" src="/img/logo/bb_logo_kort.png" alt="" />
+        </a>
       </button>
     </div>
-    <div class="burger">
+    <div>
       <button class="toggle-btn">
         <img class="burger_ikon" src="/img/burger_menu.svg" alt="" />
       </button>
     </div>
   </section>
+
+  <section class="navigation_desktop">
+    <div class="logo_center">
+      <button>
+        <a href=""
+          ><img class="logo_lang" src="/img/logo/bb_logo_lang.png" alt="" />
+        </a>
+      </button>
+    </div>
+    <div class="navigation_under_logo">
+      <nav>
+        <ul class="main_nav">
+          <li>Abonnement</li>
+          <li>Sortiment</li>
+          <li>Begivenheder</li>
+          <li>Kontakt os</li>
+        </ul>
+      </nav>
+      <nav>
+        <ul class="secondary_nav">
+          <li><img class="person" src="img/person.svg" alt="" /></li>
+          <li><img class="shopping" src="img/shopping_bag.svg" alt="" /></li>
+          <li><img class="search" src="img/search.svg" alt="" /></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
 </article>
 
 <style>
-  img {
-    width: 75px;
-  }
-
   button {
     background-color: var(--background-color);
     border: none;
   }
-
+  .logo_kort {
+    width: 75px;
+    height: 40px;
+  }
   .burger_ikon {
     width: 40px;
     height: 40px;
@@ -39,10 +67,75 @@ const { variant } = Astro.props;
     justify-content: space-between;
     border-bottom: 2px solid black;
     height: 96px;
-
     align-items: center;
     padding-left: 27px;
     padding-right: 27px;
+  }
+
+  .navigation_desktop {
+    display: none;
+  }
+
+  @media (min-width: 900px) {
+    .navigation_mobil {
+      display: none;
+    }
+    .navigation_desktop {
+      display: block;
+      background-color: var(--background-color);
+      border-bottom: 2px solid black;
+      /* rigtig afstand fra figma 
+      height: 286px;*/
+    }
+    .logo_center {
+      display: flex;
+      justify-content: center;
+      /* rigtige afstand fra figma
+      padding-top: var(--xl-spacing-desktop); */
+      padding-top: var(--l-spacing-desktop);
+    }
+    .logo_lang {
+      /* rigtige størrelse fra figma
+      width: 892px;
+      height: 66px; */
+      width: 446px;
+      height: 33px;
+      justify-content: center;
+    }
+    .navigation_under_logo {
+      display: flex;
+      justify-content: space-between;
+      font-family: "Roboto", sans-serif;
+      padding-top: var(--l-spacing-desktop);
+      padding-bottom: var(--s-spacing-desktop);
+      list-style: none;
+      font-size: var(--header_text_desktop);
+    }
+    .main_nav {
+      display: flex;
+      list-style: none;
+      gap: var(--xxl-spacing-desktop);
+      padding-left: var(--xxl-spacing-desktop);
+    }
+
+    .secondary_nav {
+      list-style: none;
+      display: flex;
+      gap: var(--s-spacing-desktop);
+      padding-right: var(--xxl-spacing-desktop);
+    }
+    .person {
+      width: 40px;
+      height: 40px;
+    }
+    .shopping {
+      width: 40px;
+      height: 40px;
+    }
+    .search {
+      width: 40px;
+      height: 40px;
+    }
   }
 </style>
 <!-- <script>
