@@ -4,9 +4,8 @@
 
 :root {
   /* MEDIA QUERY */
---media-desktop: 1700px;
---media-tablet: 600px;
-
+  --media-desktop: 900px;
+  --media-tablet: 600px;
 
   /* COLORS */
   /* rust */
