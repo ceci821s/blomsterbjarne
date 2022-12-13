@@ -18,44 +18,45 @@ const {
 ---
 
 <article data-variant={variant}>
-  <div>
+  <div class="article_wrapper">
     <div class="billede">
       <img class="arrow" src="/img/fliparrow_ikon.svg" alt="" />
       <img src="/img/abonnement_filler.webp" alt="" />
     </div>
-  </div>
-  <div class="overskrift">
-    <h5>{overskrift}</h5><div class="card_info">
-      <div class="oprindelse">
-        <img src={`/img/${oprindelseikon}_ikon.svg`} alt="" />
-        <p>{oprindelse}</p>
-      </div>
-      <div class="sollys">
-        <img src={`/img/${sollysikon}_ikon.svg`} alt="" /><p>{sollys}</p>
-      </div>
-      <div class="holdbarhed">
-        <img src={`/img/${holdbarhedikon}_ikon.svg`} alt="" /><p>
-          {holdbarhed}
-        </p>
-      </div>
-      <div class="maal">
-        <img src={`/img/${maalikon}_ikon.svg`} alt="" /><p>{maal}</p>
-      </div>
-      <div class="pris">
-        <img src={`/img/${prisikon}_ikon.svg`} alt="" /><p>{pris}</p>
+
+    <div class="overskrift">
+      <h5>{overskrift}</h5><div class="card_info">
+        <div class="oprindelse">
+          <img src={`/img/${oprindelseikon}_ikon.svg`} alt="" />
+          <p>{oprindelse}</p>
+        </div>
+        <div class="sollys">
+          <img src={`/img/${sollysikon}_ikon.svg`} alt="" /><p>{sollys}</p>
+        </div>
+        <div class="holdbarhed">
+          <img src={`/img/${holdbarhedikon}_ikon.svg`} alt="" /><p>
+            {holdbarhed}
+          </p>
+        </div>
+        <div class="maal">
+          <img src={`/img/${maalikon}_ikon.svg`} alt="" /><p>{maal}</p>
+        </div>
+        <div class="pris">
+          <img src={`/img/${prisikon}_ikon.svg`} alt="" /><p>{pris}</p>
+        </div>
       </div>
     </div>
   </div>
 </article>
 
 <style>
-  article {
+  .article_wrapper {
     border: solid 2px black;
     border-radius: var(--xs-radius);
-    max-width: 280px;
+    width: 155px;
   }
   img {
-    width: 280px;
+    width: 155px;
   }
   .overskrift {
     background-color: #ffffff;
@@ -70,13 +71,16 @@ const {
   }
 
   .arrow {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    left: 10%;
+    left: 10.5%;
   }
 
   /* flipped card blomster */
+  [data-variant="card_sortiment_flipped"] .article_wrapper {
+    width: 280px;
+  }
   [data-variant="card_sortiment_flipped"] .billede {
     display: none;
   }
@@ -97,6 +101,9 @@ const {
     display: none;
   }
   /* flipped card vaser */
+  [data-variant="card_sortiment_flipped_vaser"] .article_wrapper {
+    width: 280px;
+  }
   [data-variant="card_sortiment_flipped_vaser"] .billede {
     display: none;
   }
@@ -120,5 +127,18 @@ const {
   [data-variant="card_sortiment_flipped_vaser"] .sollys,
   [data-variant="card_sortiment_flipped_vaser"] .holdbarhed {
     display: none;
+  }
+
+  /* Card forside */
+  [data-variant="card_forside"] .article_wrapper {
+    width: 280px;
+  }
+  [data-variant="card_forside"] img {
+    width: 280px;
+  }
+  [data-variant="card_forside"] .arrow {
+    width: 25px;
+    height: 25px;
+    left: 19.8%;
   }
 </style>
