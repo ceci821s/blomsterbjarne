@@ -8,8 +8,37 @@ const { variant } = Astro.props;
   <section class="navigation_mobil">
     <div>
       <button>
-        <a href=""
-          ><img class="logo_kort" src="/img/logo/bb_logo_kort.png" alt="" />
+        <a href="">
+          <img
+            class="logo_kort"
+            id="sort"
+            src="/img/logo/bb_logo_kort.png"
+            alt=""
+          />
+          <img
+            class="logo_kort"
+            id="sol"
+            src="/img/logo/bb_logo_kort_sol.png"
+            alt=""
+          />
+          <img
+            class="logo_kort"
+            id="graes"
+            src="/img/logo/bb_logo_kort_graes.png"
+            alt=""
+          />
+          <img
+            class="logo_kort"
+            id="himmel"
+            src="/img/logo/bb_logo_kort_himmel.png"
+            alt=""
+          />
+          <img
+            class="logo_kort"
+            id="rust"
+            src="/img/logo/bb_logo_kort_rust.png"
+            alt=""
+          />
         </a>
       </button>
     </div>
@@ -22,17 +51,46 @@ const { variant } = Astro.props;
 
   <section class="navigation_desktop">
     <div class="logo_center">
-      <button>
-        <a href=""
-          ><img class="logo_lang" src="/img/logo/bb_logo_lang.png" alt="" />
-        </a>
-      </button>
+      <a class="hej" href=""></a>
+      <img
+        class="logo_lang"
+        id="sort"
+        src="/img/logo/bb_logo_lang.png"
+        alt=""
+      />
+      <img
+        class="logo_lang_sol"
+        id="sol"
+        src="/img/logo/bb_logo_lang_sol.png"
+        alt=""
+      />
+      <img
+        class="logo_lang_graes"
+        id="graes"
+        src="/img/logo/bb_logo_lang.png"
+        alt=""
+      />
+      <img
+        class="logo_lang_himmel"
+        id="himmel"
+        src="/img/logo/bb_logo_lang_himmel.png"
+        alt=""
+      />
+      <img
+        class="logo_lang_rust"
+        id="rust"
+        src="/img/logo/bb_logo_lang_rust.png"
+        alt=""
+      />
     </div>
     <div class="navigation_under_logo">
       <nav>
         <ul class="main_nav">
           <li>Abonnement</li>
-          <li>Sortiment</li>
+          <div class="sortiment_pil">
+            <li>Sortiment</li>
+            <img src="/img/pil_ned_1.svg" alt="" />
+          </div>
           <li>Begivenheder</li>
           <li>Kontakt os</li>
         </ul>
@@ -53,10 +111,231 @@ const { variant } = Astro.props;
     background-color: var(--background-color);
     border: none;
   }
-  .logo_kort {
+
+  /* farveskift mobil */
+  #sort {
     width: 75px;
     height: 40px;
+    top: 27px;
+    left: 31px;
+    animation-name: blink;
+    animation: blink 5s infinite;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    position: absolute;
   }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    1% {
+      opacity: 1;
+    }
+    24% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    49% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    74% {
+      opacity: 0;
+    }
+    75 % {
+      opacity: 0;
+    }
+    95‰ {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #sol {
+    width: 75px;
+    height: 40px;
+    position: absolute;
+    top: 27px;
+    left: 31px;
+    animation-name: blink1;
+    animation: blink1 5s infinite;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    position: absolute;
+  }
+  @keyframes blink1 {
+    0% {
+      opacity: 0;
+    }
+    1% {
+      opacity: 0;
+    }
+    24% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    49% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    74% {
+      opacity: 0;
+    }
+    75 % {
+      opacity: 0;
+    }
+    95‰ {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #graes {
+    width: 75px;
+    height: 40px;
+    position: absolute;
+    top: 27px;
+    left: 31px;
+    animation-name: blink2;
+    animation: blink2 5s infinite;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    position: absolute;
+  }
+  @keyframes blink2 {
+    0% {
+      opacity: 0;
+    }
+    1% {
+      opacity: 0;
+    }
+    24% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    49% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    74% {
+      opacity: 0;
+    }
+    75 % {
+      opacity: 0;
+    }
+    95‰ {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #himmel {
+    width: 75px;
+    height: 40px;
+    position: absolute;
+    top: 27px;
+    left: 31px;
+    animation-name: blink3;
+    animation: blink3 5s infinite;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    position: absolute;
+  }
+  @keyframes blink3 {
+    0% {
+      opacity: 0;
+    }
+    1% {
+      opacity: 0;
+    }
+    24% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    49% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    74% {
+      opacity: 1;
+    }
+    75 % {
+      opacity: 1;
+    }
+    95‰ {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  #rust {
+    width: 75px;
+    height: 40px;
+    position: absolute;
+    top: 27px;
+    left: 31px;
+    animation-name: blink4;
+    animation: blink4 5s infinite;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    position: absolute;
+  }
+  @keyframes blink4 {
+    0% {
+      opacity: 0;
+    }
+    1% {
+      opacity: 0;
+    }
+    24% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    49% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    74% {
+      opacity: 0;
+    }
+    75 % {
+      opacity: 0;
+    }
+    95‰ {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   .burger_ikon {
     width: 40px;
     height: 40px;
@@ -87,21 +366,6 @@ const { variant } = Astro.props;
       /* rigtig afstand fra figma 
       height: 286px;*/
     }
-    .logo_center {
-      display: flex;
-      justify-content: center;
-      /* rigtige afstand fra figma
-      padding-top: var(--xl-spacing-desktop); */
-      padding-top: var(--l-spacing-desktop);
-    }
-    .logo_lang {
-      /* rigtige størrelse fra figma
-      width: 892px;
-      height: 66px; */
-      width: 446px;
-      height: 33px;
-      justify-content: center;
-    }
     .navigation_under_logo {
       display: flex;
       justify-content: space-between;
@@ -116,6 +380,9 @@ const { variant } = Astro.props;
       list-style: none;
       gap: var(--xxl-spacing-desktop);
       padding-left: var(--xxl-spacing-desktop);
+    }
+    .sortiment_pil {
+      display: flex;
     }
 
     .secondary_nav {
@@ -135,6 +402,224 @@ const { variant } = Astro.props;
     .search {
       width: 40px;
       height: 40px;
+    }
+
+    .logo_center {
+      display: flex;
+      justify-content: center;
+      /* rigtige afstand fra figma
+      padding-top: var(--xl-spacing-desktop); */
+      padding-top: var(--l-spacing-desktop);
+    }
+
+    /* farveskift desktop  */
+    #sort {
+      width: 446px;
+      height: 33px;
+      animation-name: blink;
+      animation: blink 5s infinite;
+      animation-delay: 0s;
+      animation-direction: alternate;
+      position: absolute;
+    }
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      1% {
+        opacity: 1;
+      }
+      24% {
+        opacity: 0;
+      }
+      25% {
+        opacity: 0;
+      }
+      49% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      74% {
+        opacity: 0;
+      }
+      75 % {
+        opacity: 0;
+      }
+      95‰ {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    #sol {
+      width: 446px;
+      height: 33px;
+      animation-name: blink1;
+      animation: blink1 5s infinite;
+      animation-delay: 0s;
+      animation-direction: alternate;
+      position: absolute;
+    }
+    @keyframes blink1 {
+      0% {
+        opacity: 0;
+      }
+      1% {
+        opacity: 0;
+      }
+      24% {
+        opacity: 1;
+      }
+      25% {
+        opacity: 1;
+      }
+      49% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      74% {
+        opacity: 0;
+      }
+      75 % {
+        opacity: 0;
+      }
+      95‰ {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    #graes {
+      width: 446px;
+      height: 33px;
+      animation-name: blink2;
+      animation: blink2 5s infinite;
+      animation-delay: 0s;
+      animation-direction: alternate;
+      position: absolute;
+    }
+    @keyframes blink2 {
+      0% {
+        opacity: 0;
+      }
+      1% {
+        opacity: 0;
+      }
+      24% {
+        opacity: 0;
+      }
+      25% {
+        opacity: 0;
+      }
+      49% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 1;
+      }
+      74% {
+        opacity: 0;
+      }
+      75 % {
+        opacity: 0;
+      }
+      95‰ {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    #himmel {
+      width: 446px;
+      height: 33px;
+      animation-name: blink3;
+      animation: blink3 5s infinite;
+      animation-delay: 0s;
+      animation-direction: alternate;
+      position: absolute;
+    }
+    @keyframes blink3 {
+      0% {
+        opacity: 0;
+      }
+      1% {
+        opacity: 0;
+      }
+      24% {
+        opacity: 0;
+      }
+      25% {
+        opacity: 0;
+      }
+      49% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      74% {
+        opacity: 1;
+      }
+      75 % {
+        opacity: 1;
+      }
+      95‰ {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    #rust {
+      width: 446px;
+      height: 33px;
+      animation-name: blink4;
+      animation: blink4 5s infinite;
+      animation-delay: 0s;
+      animation-direction: alternate;
+      position: absolute;
+    }
+    @keyframes blink4 {
+      0% {
+        opacity: 0;
+      }
+      1% {
+        opacity: 0;
+      }
+      24% {
+        opacity: 0;
+      }
+      25% {
+        opacity: 0;
+      }
+      49% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      74% {
+        opacity: 0;
+      }
+      75 % {
+        opacity: 0;
+      }
+      95‰ {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   }
 </style>
