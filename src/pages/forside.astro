@@ -1,0 +1,127 @@
+---
+import "../style/global.css";
+
+import PrimaryButton from "../components/Primary_button.astro";
+import SecondaryButton from "../components/Secondary_button.astro";
+import CardAbonnement from "../components/Card_abonnement.astro";
+import ProgressBarAbonnementMobil from "../components/Progress_bar_abonnement_mobil.astro";
+
+import ProgressBarKurvMobil from "../components/Progress_bar_kurv_mobil.astro";
+import RadioButton from "../components/Radio_button.astro";
+import Stepguide from "../components/Stepguide.astro";
+import ProgressBarCard from "../components/Progress_bar_card.astro";
+import Footer from "../components/Footer.astro";
+import Cards from "../components/Cards.astro";
+import Navigation from "../components/Navigation.astro";
+import Login from "../components/Login.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orienta&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sansita&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+
+  <Navigation />
+
+  <PrimaryButton knaptext="" />
+
+  <SecondaryButton knaptext="" />
+  <CardAbonnement spand="hej" size="hej" pris="hej" />
+
+  <ProgressBarAbonnementMobil
+    step1="Størrelse"
+    step2="Stil"
+    step3="Duft"
+    step4="Hyppighed"
+  />
+  <ProgressBarAbonnementMobil
+    variant="progress_bar_step2"
+    step1="Størrelse"
+    step2="Stil"
+    step3="Duft"
+    step4="Hyppighed"
+  />
+  <ProgressBarAbonnementMobil
+    variant="progress_bar_step3"
+    step1="Størrelse"
+    step2="Stil"
+    step3="Duft"
+    step4="Hyppighed"
+  />
+  <ProgressBarAbonnementMobil
+    variant="progress_bar_step4"
+    step1="Størrelse"
+    step2="Stil"
+    step3="Duft"
+    step4="Hyppighed"
+  />
+  <ProgressBarKurvMobil
+    step1="Kurv"
+    step2="Info"
+    step3="Betal"
+    step4="Bekræft"
+  />
+  <ProgressBarKurvMobil
+    variant="progress_bar_step2"
+    step1="Kurv"
+    step2="Info"
+    step3="Betal"
+    step4="Bekræft"
+  />
+  <ProgressBarKurvMobil
+    variant="progress_bar_step3"
+    step1="Kurv"
+    step2="Info"
+    step3="Betal"
+    step4="Bekræft"
+  />
+  <ProgressBarKurvMobil
+    variant="progress_bar_step4"
+    step1="Kurv"
+    step2="Info"
+    step3="Betal"
+    step4="Bekræft"
+  />
+
+  <Stepguide
+    overskrift="1.stepguide"
+    tekst="lorem ipsum"
+    progress_variant="progress_bar_card_step_1"
+  />
+
+  <ProgressBarCard />
+  <ProgressBarCard variant="progress_bar_card_step_1" />
+  <ProgressBarCard variant="progress_bar_card_step_2" />
+  <ProgressBarCard variant="progress_bar_card_step_3" />
+  <ProgressBarCard variant="progress_bar_card_step_4" />
+
+  <Footer />
+
+  <Cards overskrift="hej" />
+  <Cards variant="card_sortiment_flipped" overskrift="hej" />
+  <Cards
+    variant="card_sortiment_flipped_vaser"
+    overskrift="hej"
+    underoverskrift="hej"
+  />
+  <Cards variant="card_forside" overskrift="hej" />
+  <Cards variant="card_forside_flipped" overskrift="hej" />
+
+  <Login />
+  <Login variant="opret_bruger" />
+
+  <RadioButton />
+
+  <style></style>
+
+
+</html>
