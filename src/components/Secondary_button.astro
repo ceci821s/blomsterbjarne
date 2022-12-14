@@ -28,4 +28,12 @@ const { variant, knaptext } = Astro.props;
   button:hover {
     background-color: var(--color-secondary-button-hover-background);
   }
+  @media (min-width: 900px) {
+    button {
+      font-size: var(--button-desktop);
+      padding: 15px 60px;
+      width: 158px;
+height: 56px;
+    }
+  }
 </style>
