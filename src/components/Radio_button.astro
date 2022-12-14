@@ -7,5 +7,24 @@ const {
 ---
 
 <article>
-    <input type="radio">
+    <label class="form-control">
+        <input type="radio" name="radio" />
+      </label>
+      <label class="form-control">
+        <input type="radio" name="radio" />
+       
+      </label>
 </article>
+
+<style>
+  input[type="radio"] {
+  margin: 0;
+  font-size: var(--body-desktop);
+  accent-color: var(--rust-500);
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid black;
+  border-radius: 50%;
+}
+
+</style>
