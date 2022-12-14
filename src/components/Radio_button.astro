@@ -10,21 +10,26 @@ const {
     <label class="form-control">
         <input type="radio" name="radio" />
       </label>
-      <label class="form-control">
+      <!-- <label class="form-control">
         <input type="radio" name="radio" />
        
-      </label>
+      </label> -->
 </article>
 
 <style>
   input[type="radio"] {
   margin: 0;
-  font-size: var(--body-desktop);
+  font-size: var(--body-mobile);
   accent-color: var(--rust-500);
   width: 1.15em;
   height: 1.15em;
   border: 0.15em solid black;
   border-radius: 50%;
+}
+@media (min-width: 900px) {
+    input[type="radio"] {
+        font-size: var(--body-desktop);
+    }
 }
 
 </style>
