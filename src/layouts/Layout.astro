@@ -1,11 +1,7 @@
 ---
-import PrimaryButton from "../components/Primary_button.astro";
 
-export interface Props {
-  title: string;
-}
 
-const { title, knaptext } = Astro.props;
+const { content } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -22,12 +18,11 @@ const { title, knaptext } = Astro.props;
     />
     <meta name="generator" content={Astro.generator} />
 
-    <title>{title}</title>
+    <title>{content}</title>
   </head>
   <body>
     <slot />
-    <PrimaryButton />
-    <PrimaryButton variant="button_primary_desktop" knaptext="hej" />
+
   </body>
 </html>
 <style></style>

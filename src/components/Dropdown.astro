@@ -2,18 +2,55 @@
 import "../style/global.css";
 
 const {
-  variant,
-  overskrift,
-  oprindelse,
-  sollys,
-  holdbarhed,
-  maal,
-  pris,
-  oprindelseikon = "oprindelse",
-  sollysikon = "sollys",
-  holdbarhedikon = "holdbarhed",
-  maalikon = "maal",
-  prisikon = "pris",
-  underoverskrift,
+  
 } = Astro.props;
 ---
+
+<article>
+    <div class="nav">
+        
+            <button onclick="myFunction()">
+            <p>Vælg hyppighed</p><img src="/img/downarrow_ikon.svg" alt=""></button>
+        <div id="muligheder">
+            <div class="uge"><p>Hver uge</p></div>
+            <div class="anden_uge"><p>Hver anden uge</p></div>
+            <div class="maaned"><p>Hver måned</p></div>
+        </div>
+    </div>
+</article>
+
+<style>
+  
+     .uge, .anden_uge, .maaned, button {
+        display: flex;
+        justify-content: space-between;
+        font-family: var(--font-body);
+        font-size: var(--body-mobile);
+        gap: 5px;
+        border: 2px solid black;
+        background-color: var(--background-color);
+        width: 200px;
+        padding: 3px;
+    }
+  
+    img {
+        width: 20px;
+        height: 20px;
+    }
+    #muligheder {
+        display: none;
+    }
+</style>
+<script>
+    const btn = document.querySelector(".toggle-btn");
+  const nav = document.querySelector(".nav");
+
+  function toggleMenu() {
+    nav.classList.toggle("shown");
+    const menuShown = nav.classList.contains("shown");
+ 
+  }
+
+  btn.addEventListener("click", toggleMenu);
+
+</script>
