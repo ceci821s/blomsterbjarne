@@ -89,9 +89,9 @@
 
   /* PROGRESSBARS */
 
-  /* MARGIN */
-  --margin_mobile: 30px;
-  --margin_desktop: 80px;
+  /* PADDING */
+  --padding-mobile: 30px;
+  --padding-desktop: 80px;
 
   /* ICON SIZES */
   --icon-mobile-height: 40px;
@@ -235,7 +235,9 @@
   /* shadows */
   --shadow: rgba(70, 70, 70, 0.25);
 
-  /* border radius */
+  /* border & border radius */
 
-  --xs-radius: 3px;
+  --radius-mobile: 3px;
+  --radius-desktop: 5px;
+  --border: 2px;
 }

@@ -15,6 +15,8 @@ const { variant, knaptext } = Astro.props;
     font-weight: var(--font-weight-semibold);
     font-size: var(--button-mobile);
     padding: 15px 40px;
+    max-width: 50%;
+    height: 60px;
 
     box-shadow: var(--shadow);
     display: flex;
@@ -27,5 +29,13 @@ const { variant, knaptext } = Astro.props;
   }
   button:hover {
     background-color: var(--color-secondary-button-hover-background);
+  }
+  @media (min-width: 900px) {
+    button {
+      font-size: var(--button-desktop);
+      padding: 15px 60px;
+      
+
+    }
   }
 </style>

@@ -1,0 +1,278 @@
+---
+import "../style/global.css";
+import PrimaryButton from "./Primary_button.astro";
+const { variant } = Astro.props;
+---
+
+<div data-variant={variant}>
+  <section>
+    <div class="login_opret">
+      <div class="logind">
+        <img src="/img/radio.svg" alt="" />
+        <p>Log ind</p>
+      </div>
+      <div class="opret">
+        <img src="/img/radio_un.svg" alt="" />
+        <p>Opret konto</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <h3 class="overskrift1">Log ind</h3>
+      <h3 class="overskrift2">Opret bruger</h3>
+
+      <p class="text">
+        Vil du give feedback eller købe vores abonnement, skal du log ind. Har
+        du ikke bruger, skal du oprette en.
+      </p>
+
+      <form>
+        <div class="email">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            inputmode="email"
+            placeholder="Fx. google@gmail.com"
+          />
+        </div>
+        <div id="gentagemail" id="gentagemail">
+          <label for="email">Gentag e-mail</label>
+          <input
+            type="email"
+            inputmode="email"
+            placeholder="Fx. google@gmail.com"
+          />
+        </div>
+        <div class="password">
+          <label for="password">Adgangskode</label>
+          <input
+            type="text"
+            inputmode="text"
+            placeholder="Indeholder min. 6 karakterer"
+          />
+        </div>
+        <div id="gentagpassword">
+          <label class="gentagtext" for="password">Gentag adgangskode</label>
+          <input
+            type="text"
+            inputmode="text"
+            placeholder="Indeholder min. 6 karakterer"
+          />
+        </div>
+        <a class="glemt" href="#">Har du glemt dit kodeord?</a>
+        <div class="knap">
+          <PrimaryButton class="" knaptext="Log ind" />
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+
+<style>
+  /* --------------------------------------------- LOG IND */
+  section {
+    background-color: var(--background-color);
+    border: var(--border) solid black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 800px;
+    text-align: center;
+    padding-bottom: var(--xl-spacing-mobile);
+  }
+
+  .knap {
+    display: flex;
+    place-content: center;
+  }
+
+  input {
+    border: var(--border) solid black;
+    height: var(--m-spacing-mobile);
+    border-radius: var(--radius-mobile);
+    padding-left: var(--xs-spacing-mobile);
+    max-width: 630px;
+  }
+
+  .email,
+  .password,
+  #gentagpassword,
+  #gentagemail {
+    display: grid;
+    gap: var(--xs-spacing-mobile);
+  }
+
+  .text {
+    padding-bottom: var(--l-spacing-mobile);
+  }
+
+  a {
+    font-family: var(--font-body);
+    font-size: var(--body-mobile);
+    color: var(--color-headings);
+  }
+
+  a:hover {
+    color: var(--rust-500);
+  }
+
+  h3 {
+    font-family: var(--other-headings);
+    font-size: var(--h3-mobile);
+  }
+
+  img {
+    padding-right: var(--s-spacing-mobile);
+  }
+
+  .content,
+  .logind,
+  .opret {
+    padding-left: var(--padding-mobile);
+    padding-right: var(--padding-mobile);
+  }
+
+  .content {
+    padding-top: var(--l-spacing-mobile);
+  }
+
+  .opret {
+    padding-left: 10px;
+  }
+
+  #gentagpassword,
+  #gentagemail {
+    display: none;
+  }
+
+  h3 {
+    padding-bottom: var(--m-spacing-mobile);
+  }
+
+  .overskrift2 {
+    display: none;
+  }
+
+  .login_opret,
+  .logind,
+  .opret {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .logind,
+  .opret {
+    display: flex;
+  }
+
+  .opret {
+    border: var(--border) solid black;
+    border-top: 0;
+    border-right: 0;
+  }
+
+  form {
+    display: grid;
+    gap: var(--m-spacing-mobile);
+    text-align: left;
+  }
+
+  label {
+    font-family: var(--other-headings);
+    font-size: var(--body-mobile);
+  }
+
+  .glemt {
+    text-align: center;
+  }
+
+  section p {
+    font-family: var(--font-body);
+    font-size: var(--body-mobile);
+  }
+
+  /* ---------------------------------------------OPRET BRUGER VARIANT */
+  [data-variant="opret_bruger"] .overskrift2,
+  [data-variant="opret_bruger"] #gentagpassword,
+  [data-variant="opret_bruger"] #gentagemail {
+    display: block;
+  }
+
+  [data-variant="opret_bruger"] .glemt,
+  [data-variant="opret_bruger"] .text,
+  [data-variant="opret_bruger"] .overskrift1 {
+    display: none;
+  }
+
+  [data-variant="opret_bruger"] #gentagemail,
+  [data-variant="opret_bruger"] #gentagpassword {
+    display: grid;
+  }
+
+  [data-variant="opret_bruger"] .opret {
+    border: 0;
+  }
+
+  [data-variant="opret_bruger"] .logind {
+    border: var(--border) solid black;
+    border-top: 0;
+    border-left: 0;
+  }
+
+  /* --------------------------------------------------------------------DESKTOP */
+  @media (min-width: 900px) {
+    h3 {
+      font-size: var(--h3-desktop);
+      padding-bottom: var(--m-spacing-desktop);
+    }
+
+    section {
+      padding-bottom: var(--xl-spacing-desktop);
+    }
+
+    .text {
+      padding-bottom: var(--l-spacing-desktop);
+    }
+
+    section p {
+      font-size: var(--body-desktop);
+    }
+
+    .content {
+      padding-top: var(--l-spacing-desktop);
+    }
+
+    input {
+      height: var(--m-spacing-desktop);
+      border-radius: var(--radius-desktop);
+      padding-left: var(--xs-spacing-desktop);
+      max-width: 630px;
+    }
+
+    form {
+      display: grid;
+      gap: var(--m-spacing-desktop);
+    }
+
+    a {
+      font-size: var(--body-desktop);
+    }
+
+    img {
+      padding-right: var(--s-spacing-desktop);
+    }
+
+    .content,
+    .logind,
+    .opret {
+      padding-left: var(--padding-desktop);
+      padding-right: var(--padding-desktop);
+    }
+
+    label {
+      font-size: var(--body-desktop);
+    }
+  }
+</style>
