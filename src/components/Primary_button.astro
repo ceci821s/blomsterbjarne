@@ -19,7 +19,7 @@ const { variant, knaptext } = Astro.props;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-radius: var(--xs-radius);
+    border-radius: var(--radius-mobile);
     max-width: 50%;
     height: 60px;
     gap: 10px;
@@ -31,8 +31,7 @@ const { variant, knaptext } = Astro.props;
     button {
       font-size: var(--button-desktop);
       padding: 15px 60px;
-      
-
+      border-radius: var(--radius-desktop);
     }
   }
 </style>
